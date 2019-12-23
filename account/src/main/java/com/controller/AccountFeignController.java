@@ -1,7 +1,7 @@
 package com.controller;
 
 import com.Account;
-import com.AccountFeignClient;
+import com.AccountFeignService;
 import com.repository.AccountRepository;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -15,16 +15,12 @@ import javax.annotation.Resource;
  * @date: 2018/9/10.
  */
 @RestController
-@RequestMapping(value = "/account-service")
-public class AccountFeignController
-//        implements AccountFeignClient
-{
+public class AccountFeignController implements AccountFeignService {
 
     @Resource
     private AccountRepository accountRepository;
 
-//    @Override
-    @PostMapping("/deduction")
+    @Override
     public void deduction(String id, Integer money) {
         Account account = accountRepository.getOne(id);
         if (account.getBalance()<money){

@@ -1,15 +1,15 @@
-package com.service;
+package com;
 
-import com.Sku;
-import org.springframework.cloud.openfeign.FeignClient;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 /**
  * @Description
  * @author: yangyingyang
- * @date: 2019/11/30.
+ * @date: 2019/12/23.
  */
-@FeignClient(name = "feign-service")
 @RequestMapping(value = "/storage-service")
 public interface StockFeignService {
 

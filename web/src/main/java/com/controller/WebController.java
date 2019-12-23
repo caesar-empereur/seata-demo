@@ -2,10 +2,9 @@ package com.controller;
 
 import com.Order;
 import com.Sku;
-import com.AccountFeignClient;
-import com.service.AccountService;
-import com.service.OrderFeignService;
-import com.service.StockFeignService;
+import com.service.AccountFeignClient;
+import com.service.OrderFeignClient;
+import com.service.StockFeignClient;
 import io.seata.spring.annotation.GlobalTransactional;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -24,11 +23,11 @@ import javax.annotation.Resource;
 public class WebController {
 
     @Resource
-    private AccountService accountService;
+    private AccountFeignClient accountService;
     @Resource
-    private OrderFeignService orderFeignService;
+    private OrderFeignClient orderFeignService;
     @Resource
-    private StockFeignService stockFeignService;
+    private StockFeignClient stockFeignService;
 
     @PostMapping("/submit")
     @GlobalTransactional

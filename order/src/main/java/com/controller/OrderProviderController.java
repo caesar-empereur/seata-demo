@@ -2,9 +2,7 @@ package com.controller;
 
 import com.Order;
 import com.repository.OrderRepository;
-import com.service.OrderFeignService;
-import io.swagger.annotations.Api;
-import org.springframework.web.bind.annotation.RequestMapping;
+import com.service.OrderFeignClient;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
@@ -16,7 +14,7 @@ import javax.annotation.Resource;
  */
 @RestController
 //@RequestMapping(value = "/provider/order-service")
-public class OrderProviderController implements OrderFeignService {
+public class OrderProviderController implements OrderFeignClient {
 
     @Resource
     private OrderRepository orderRepository;

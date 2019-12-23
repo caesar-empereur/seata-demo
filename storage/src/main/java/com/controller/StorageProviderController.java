@@ -2,8 +2,7 @@ package com.controller;
 
 import com.Sku;
 import com.repository.SkuRepository;
-import com.service.StockFeignService;
-import org.springframework.web.bind.annotation.RequestMapping;
+import com.service.StockFeignClient;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
@@ -15,7 +14,7 @@ import javax.annotation.Resource;
  */
 @RestController
 //@RequestMapping("/provider/storage-service")
-public class StorageProviderController implements StockFeignService {
+public class StorageProviderController implements StockFeignClient {
 
     @Resource
     private SkuRepository skuRepository;
