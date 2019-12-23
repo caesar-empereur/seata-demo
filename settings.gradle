@@ -1,0 +1,6 @@
+rootProject.name = 'seata-demo'
+include 'web'
+include 'order'
+include 'storage'
+include 'account'
+include 'common'
