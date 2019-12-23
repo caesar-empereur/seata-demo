@@ -1,5 +1,6 @@
 package com;
 
+import io.seata.spring.annotation.GlobalTransactionScanner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.cloud.client.SpringCloudApplication;
@@ -25,9 +26,7 @@ public class OrderApplication {
     }
 
     @Bean
-    @LoadBalanced
-    public RestTemplate restTemplate(){
-        return new RestTemplate();
+    public GlobalTransactionScanner globalTransactionScanner() {
+        return new GlobalTransactionScanner("storage-service", "seata-group");
     }
 }
-
