@@ -18,6 +18,6 @@ public interface AccountRepository extends JpaRepository<Account, String> {
 
     @Transactional
     @Modifying
-    @Query(value = "update account set balance=balance-?1 where id=?2", nativeQuery = true)
+    @Query(value = "update t_account set balance=balance-?1 where id=?2", nativeQuery = true)
     void reduce(Integer money, String id);
 }

@@ -1,6 +1,9 @@
 package com;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Data;
+import org.hibernate.annotations.DynamicInsert;
+import org.hibernate.annotations.DynamicUpdate;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.Entity;
@@ -15,6 +18,9 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "t_account")
+@DynamicInsert
+@DynamicUpdate
+@JsonIgnoreProperties(value={ "hibernateLazyInitializer", "handler", "fieldHandler"})
 public class Account {
 
     @Id

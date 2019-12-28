@@ -18,6 +18,6 @@ public interface SkuRepository extends JpaRepository<Sku, String> {
 
     @Transactional
     @Modifying
-    @Query(value = "update sku set num=num-?1 where id=?2", nativeQuery = true)
+    @Query(value = "update t_sku set num=num-?1 where id=?2", nativeQuery = true)
     void reduce(Integer num, String id);
 }
