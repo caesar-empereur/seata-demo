@@ -40,7 +40,7 @@ public class WebController {
         accountService.deduction(submit.getAccountId(), totolPrice);
 
         Order order = new Order();
-        order.setPrice(totolPrice);
+        order.setTotalPrice(totolPrice);
         order.setAccountId(submit.getAccountId());
         order.setSkuId(submit.getSkuId());
 
