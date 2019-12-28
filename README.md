@@ -6,6 +6,7 @@ seata研究案例
 * 模拟一个创建订单的流程，包括库存，账号余额，积分
 * springcloud + feign + consul
 * seata-demo.sql 是项目运行需要的数据库表结构的脚本
+* 直接请求 WebController.saveOrder 方法，就可以测试分布式事务的提交，回滚了
 
 
 ### 模块说明
