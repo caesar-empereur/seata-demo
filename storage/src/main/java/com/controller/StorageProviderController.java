@@ -3,6 +3,7 @@ package com.controller;
 import com.Sku;
 import com.StockFeignService;
 import com.repository.SkuRepository;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
@@ -13,15 +14,13 @@ import javax.annotation.Resource;
  * @date: 2018/9/10.
  */
 @RestController
-//@RequestMapping("/provider/storage-service")
 public class StorageProviderController implements StockFeignService {
 
     @Resource
     private SkuRepository skuRepository;
 
     @Override
-    public void reduceStock(String skuId, int num) {
-
+    public void reduceStock(@RequestParam("skuId") String skuId, @RequestParam("num") int num) {
         Sku sku = skuRepository.getOne(skuId);
         if (sku.getNum()<num){
             throw new RuntimeException("库存不足");

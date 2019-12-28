@@ -1,5 +1,6 @@
 package com;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Data;
 import org.hibernate.annotations.GenericGenerator;
 
@@ -15,6 +16,7 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "t_sku")
+@JsonIgnoreProperties(value={ "hibernateLazyInitializer", "handler", "fieldHandler"})
 public class Sku {
 
     @Id

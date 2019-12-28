@@ -8,7 +8,7 @@ import org.springframework.cloud.openfeign.FeignClient;
  * @author: yangyingyang
  * @date: 2019/12/21.
  */
-@FeignClient(name = "feign-service")
+@FeignClient(name = "account-service")
 public interface AccountFeignClient extends AccountFeignService {
 
 }

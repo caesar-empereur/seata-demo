@@ -26,6 +26,6 @@ public class StorageApplication {
 
     @Bean
     public GlobalTransactionScanner globalTransactionScanner() {
-        return new GlobalTransactionScanner("order-service", "seata-group");
+        return new GlobalTransactionScanner("storage-service", "seata-group");
     }
 }
