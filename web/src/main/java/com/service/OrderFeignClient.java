@@ -1,6 +1,6 @@
 package com.service;
 
-import com.OrderFeignService;
+import com.feign.OrderFeignService;
 import org.springframework.cloud.openfeign.FeignClient;
 
 /**

@@ -1,7 +1,7 @@
 package com.controller;
 
-import com.Order;
-import com.Sku;
+import com.model.Order;
+import com.model.Sku;
 import com.service.AccountFeignClient;
 import com.service.OrderFeignClient;
 import com.service.StockFeignClient;

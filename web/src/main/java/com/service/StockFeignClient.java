@@ -1,6 +1,6 @@
 package com.service;
 
-import com.StockFeignService;
+import com.feign.StockFeignService;
 import org.springframework.cloud.openfeign.FeignClient;
 
 /**

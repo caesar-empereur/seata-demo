@@ -1,10 +1,8 @@
 package com.controller;
 
-import com.Account;
-import com.AccountFeignService;
+import com.model.Account;
+import com.feign.AccountFeignService;
 import com.repository.AccountRepository;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 

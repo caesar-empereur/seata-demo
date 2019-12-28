@@ -1,7 +1,7 @@
 package com.controller;
 
-import com.Sku;
-import com.StockFeignService;
+import com.model.Sku;
+import com.feign.StockFeignService;
 import com.repository.SkuRepository;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;

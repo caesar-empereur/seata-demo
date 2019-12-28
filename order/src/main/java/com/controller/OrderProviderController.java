@@ -1,7 +1,7 @@
 package com.controller;
 
-import com.Order;
-import com.OrderFeignService;
+import com.model.Order;
+import com.feign.OrderFeignService;
 import com.repository.OrderRepository;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
