@@ -16,16 +16,12 @@ import javax.annotation.Resource;
  * @date: 2018/9/10.
  */
 @RestController
-@RequestMapping(value = "/account-service")
-public class AccountFeignController
-//        implements AccountFeignService
-{
+public class AccountFeignController implements AccountFeignService {
 
     @Resource
     private AccountRepository accountRepository;
 
-//    @Override
-    @PostMapping("/deduction")
+    @Override
     public void deduction(@RequestParam("accountId") String id, @RequestParam("money") Integer money) {
         Account account = accountRepository.getOne(id);
         if (account.getBalance()<money){

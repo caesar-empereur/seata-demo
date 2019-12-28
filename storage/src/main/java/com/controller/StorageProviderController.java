@@ -29,7 +29,7 @@ public class StorageProviderController implements StockFeignService {
     }
 
     @Override
-    public Sku getSku(String skuId) {
+    public Sku getSku(@RequestParam("skuId") String skuId) {
         return skuRepository.getOne(skuId);
     }
 }

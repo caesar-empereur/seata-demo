@@ -14,5 +14,5 @@ import org.springframework.web.bind.annotation.RequestParam;
 public interface AccountFeignService {
 
     @PostMapping("/deduction")
-    void deduction(@RequestParam("accountId") String id, @RequestParam("accountId") Integer money);
+    void deduction(@RequestParam("accountId") String id, @RequestParam("money") Integer money);
 }
