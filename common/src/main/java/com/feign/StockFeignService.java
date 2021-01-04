@@ -17,5 +17,6 @@ public interface StockFeignService {
     @PostMapping("/reduce")
     void reduceStock(@RequestParam("skuId") String skuId, @RequestParam("num") int num);
 
-    @GetMapping("/get") Sku getSku(@RequestParam("skuId") String skuId);
+    @GetMapping("/get")
+    Sku getSku(@RequestParam("skuId") String skuId);
 }
